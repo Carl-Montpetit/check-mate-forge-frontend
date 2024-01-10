@@ -1,12 +1,13 @@
 import "./App.css";
 import Title from "./Title";
+import Board from "./Board";
 
 function App() {
   return (
-    <div id='app-background'>
+    <>
       <Title text="Welcome to Check Mate Forge" />
       <Board />
-    </div>
+    </>
   );
 }
 
