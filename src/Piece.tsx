@@ -1,46 +1,43 @@
 import "./Piece.css";
 
-interface PieceProps {
+interface Props {
   type: string;
   isDark: boolean;
   row: number;
   column: string;
 }
 
-function Piece({ type, isDark, row, column }: PieceProps) {
+function Piece({ type, isDark, row, column }: Props) {
   const getIcon = (type: string, isDark: boolean) => {
-    let icon: string = "";
+    const colorPrefix = isDark ? "black-" : "white-";
 
-    if (isDark) {
-      if (type === "rook") {
-        icon = "black-rook.svg";
-      } else if (type === "knight") icon = "black-knight.svg";
-      else if (type === "bishop") icon = "black-bishop.svg";
-      else if (type === "queen") icon = "dark-queen.svg";
-      else if (type === "king") icon = "black-king.svg";
-      else if (type === "pawn") icon = "black-pawn.svg";
-    } else {
-      if (type === "rook") {
-        icon = "white-rook.svg";
-      } else if (type === "knight") icon = "white-knight.svg";
-      else if (type === "bishop") icon = "white-bishop.svg";
-      else if (type === "queen") icon = "white-queen.svg";
-      else if (type === "king") icon = "white-king.svg";
-      else if (type === "pawn") icon = "white-pawn.svg";
+    const iconMap: { [key: string]: string } = {
+      rook: `${colorPrefix}rook.svg`,
+      knight: `${colorPrefix}knight.svg`,
+      bishop: `${colorPrefix}bishop.svg`,
+      queen: `${colorPrefix}queen.svg`,
+      king: `${colorPrefix}king.svg`,
+      pawn: `${colorPrefix}pawn.svg`,
+    };
+
+    const icon = iconMap[type];
+
+    if (!icon) {
+      console.error("Wrong input for getIcon function!");
+      throw new Error("Wrong input for getIcon function!");
     }
 
     return icon;
   };
 
   return (
-    <>
-      <img
-        id={`${isDark ? "black" : "white"}-${type}-${row}-${column}`}
-        className="piece"
-        src={getIcon(type, isDark)}
-        alt={type}
-      />
-    </>
+    <img
+      // id will be dependent on the initial position
+      id={`${isDark ? "black" : "white"}-${type}-${row}-${column}`}
+      className="piece"
+      src={getIcon(type, isDark)}
+      alt={type}
+    />
   );
 }
 
