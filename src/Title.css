@@ -5,10 +5,10 @@
 }
 
 #title-header {
-  font-size: 70px;
+  margin: 15px;
+  padding: 0px;
+  font-size: 50px;
   font-family: "Papyrus", fantasy;
-  width: 100%;
-  height: 100px;
   background: linear-gradient(to bottom, #302212, #8f895e);
   background-clip: text;
   color: transparent;

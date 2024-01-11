@@ -7,7 +7,7 @@ function Board() {
     <div id="chess-board-container">
       <div id="chess-board-border">
         <table id="chess-board-table">
-          <tbody id="chess-board-table-body">
+          <tbody>
             <tr id="row-8">
               <Cell isDark={false} row={8} column="A">
                 <Piece type="rook" isDark={true} row={8} column="A" />
