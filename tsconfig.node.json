@@ -4,7 +4,7 @@
     "strict": true,
     "composite": true,
     "skipLibCheck": true,
-    "module": "ESNext",
+    "module": "Node16",
     "moduleResolution": "node16",
     "allowSyntheticDefaultImports": true
   },
