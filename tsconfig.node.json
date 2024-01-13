@@ -4,7 +4,7 @@
     "strict": true,
     "composite": true,
     "skipLibCheck": true,
-    "module": "Node16",
+    "module": "node16",
     "moduleResolution": "node16",
     "allowSyntheticDefaultImports": true
   },
