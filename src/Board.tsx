@@ -1,6 +1,6 @@
 import "./Board.css";
-import Cell from "./Cell";
-import Piece from "./Piece";
+import Cell from "./Cell.tsx";
+import Piece from "./Piece.tsx";
 
 function Board() {
   return (

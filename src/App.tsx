@@ -1,14 +1,22 @@
-import "./App.css";
-import Title from "./Title";
-import Board from "./Board";
+import React from "react";
+import "./app.css";
+import Title from "./Title.tsx";
+import Board from "./Board.tsx";
+import Button from "./Button.tsx";
 
-function App() {
+const App: React.FC = () => {
+  const handleClick = () => {
+    alert("¡Click me");
+  };
+
   return (
-    <>
+    <div>
       <Title text="Welcome to Check Mate Forge" />
+      <Button onClick={handleClick}>Create an account</Button>
+      <Button onClick={handleClick}>Log in</Button>
       <Board />
-    </>
+    </div>
   );
-}
+};
 
 export default App;
