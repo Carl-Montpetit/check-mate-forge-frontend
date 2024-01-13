@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# ♔ check-mate-forge-frontend ♕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> react + vite + typescript + eslint application
 
-Currently, two official plugins are available:
+Frontend of a chess game web application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## basic commands
 
-## Expanding the ESLint configuration
+```bash
+# run the app for development
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# build app
+npm run build
 
-- Configure the top-level `parserOptions` property like this:
+# call eslint on the project for linting
+npm run lint 
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# preview with vite 
+npm run preview
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Docker
+
+> Useful commands for docker image and containers.
+
+```bash
+# create an image based on the Dockerfile
+docker build . -t check-mate-forge-frontend
+
+# create and run a container on localhost:8080 from the image
+docker run -p 8080:8080 -d check-mate-forge-frontend
+
+# stop the container
+docker stop check-mate-forge-frontend
+
+# start stopped container
+docker start check-mate-forge-frontend
+
+# restart container
+docker restart check-mate-forge-frontend
+
+# remove container
+docker rm check-mate-forge-frontend
+
+# remove image
+docker rmi check-mate-forge-frontend
+```
+
+
