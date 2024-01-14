@@ -1,9 +1,9 @@
 import styles from "./Title.module.css";
 
-interface TitleProps {
+interface Props {
   text: string;
 }
-function Title({ text }: TitleProps) {
+function Title({ text }: Props) {
   return (
     <div id="title-container">
       <h1 className={styles.titleHeader}>{text}</h1>

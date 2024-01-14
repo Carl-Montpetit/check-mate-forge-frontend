@@ -1,21 +1,17 @@
-// import styles from "./NavBar.module.css";
+import styles from "./NavBar.module.css";
 import React from "react";
-import Title from "./Title.tsx";
 import Button from "./Button.tsx";
 
-interface Props {
-  title: string;
-}
+interface Props {}
 
-const NavBar: React.FC<Props> = ({ title }) => {
-  const handleClick = () => {
+const NavBar: React.FC<Props> = () => {
+  const handleClick = (e: React.MouseEvent) => {
     // Handle click logic here
-    console.log("Button clicked!");
+    console.log(e.target);
   };
 
   return (
-    <nav>
-      <Title text={title} />
+    <nav className={styles.nav}>
       <div className="nav-buttons">
         <Button esthetics="create-account" onClick={handleClick}>
           Create an account

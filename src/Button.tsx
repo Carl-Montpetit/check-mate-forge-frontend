@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, PropsWithChildren } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   esthetics: string;
-  onClick?: () => void;
+  onClick: (e: React.MouseEvent) => void;
 }
 const Button: React.FC<PropsWithChildren<Props>> = ({
   esthetics,
