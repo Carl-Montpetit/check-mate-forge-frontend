@@ -1,4 +1,4 @@
-import "./Title.css";
+import styles from "./Title.module.css";
 
 interface TitleProps {
   text: string;
@@ -6,7 +6,7 @@ interface TitleProps {
 function Title({ text }: TitleProps) {
   return (
     <div id="title-container">
-      <h1 id="title-header">{text}</h1>
+      <h1 className={styles.titleHeader}>{text}</h1>
     </div>
   );
 }

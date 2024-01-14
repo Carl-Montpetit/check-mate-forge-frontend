@@ -1,4 +1,4 @@
-import "./Cell.css";
+import styles from "./Cell.module.css";
 
 interface Props {
   isDark: boolean;
@@ -15,6 +15,7 @@ function Cell({
   return (
     <td
       id={`${isDark ? "black" : "white"}-cell-${row}-${column}`}
+      className={styles.cell}
       style={{ backgroundColor: isDark ? "#8B4513" : "#D2B48C" }}
     >
       {children}

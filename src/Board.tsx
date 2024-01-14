@@ -1,12 +1,12 @@
-import "./Board.css";
+import styles from "./Board.module.css";
 import Cell from "./Cell.tsx";
 import Piece from "./Piece.tsx";
 
 function Board() {
   return (
-    <div id="chess-board-container">
-      <div id="chess-board-border">
-        <table id="chess-board-table">
+    <div id="chess-board-container" className={styles.chessBoardContainer}>
+      <div id="chess-board-border" className={styles.chessBoardBorder}>
+        <table id="chess-board-table" className={styles.chessBoardTable}>
           <tbody>
             <tr id="row-8">
               <Cell isDark={false} row={8} column="A">

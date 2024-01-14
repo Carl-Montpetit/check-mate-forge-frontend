@@ -1,4 +1,4 @@
-import "./Piece.css";
+import styles from "./Piece.module.css";
 
 interface Props {
   type: string;
@@ -34,7 +34,7 @@ function Piece({ type, isDark, row, column }: Props) {
     <img
       // id will be dependent on the initial position
       id={`${isDark ? "black" : "white"}-${type}-${row}-${column}`}
-      className="piece"
+      className={styles.piece}
       src={getIcon(type, isDark)}
       alt={type}
     />

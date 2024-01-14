@@ -1,24 +1,29 @@
-import React from 'react';
-import Title from './Title.tsx';
-import Button from './Button.tsx';
+// import styles from "./NavBar.module.css";
+import React from "react";
+import Title from "./Title.tsx";
+import Button from "./Button.tsx";
 
 interface Props {
   title: string;
-  button: React.ReactNode;
 }
 
-const NavBar: React.FC<Props> = ({ title, button }) => {
+const NavBar: React.FC<Props> = ({ title }) => {
   const handleClick = () => {
     // Handle click logic here
-    console.log('Button clicked!');
+    console.log("Button clicked!");
   };
 
   return (
     <nav>
       <Title text={title} />
-      {button}
-      <Button onClick={handleClick}>Create an account</Button>
-      <Button onClick={handleClick}>Log in</Button>
+      <div className="nav-buttons">
+        <Button esthetics="create-account" onClick={handleClick}>
+          Create an account
+        </Button>
+        <Button esthetics="login" onClick={handleClick}>
+          Log in
+        </Button>
+      </div>
     </nav>
   );
 };
