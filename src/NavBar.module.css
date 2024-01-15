@@ -1,6 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.siteTitle {
+  font-size: 2.5rem;
+  font-family: "Papyrus", fantasy;
+  padding: 0;
+  justify-content: flex-start;
+  margin: 0;
+}
+
 .nav {
   justify-content: space-between;
-  padding: 5px;
+  color: whitesmoke;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+  background-color: lightslategrey;
+  font-size: 1rem;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Papyrus", fantasy;
+}
+
+.nav li:active {
+  background-color: lightslategrey;
+}
+
+.nav li:hover {
+  background-color: rgb(68, 74, 82);
 }

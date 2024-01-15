@@ -1,27 +1,19 @@
 import styles from "./NavBar.module.css";
-import React from "react";
-import Button from "./Button.tsx";
 
-interface Props {}
-
-const NavBar: React.FC<Props> = () => {
-  const handleClick = (e: React.MouseEvent) => {
-    // Handle click logic here
-    console.log(e.target);
-  };
-
+export default function NavBar() {
   return (
     <nav className={styles.nav}>
-      <div className="nav-buttons">
-        <Button esthetics="create-account" onClick={handleClick}>
-          Create an account
-        </Button>
-        <Button esthetics="login" onClick={handleClick}>
-          Log in
-        </Button>
-      </div>
+      <a href="/" className={styles.siteTitle}>
+        Check Mate Forge
+      </a>
+      <ul>
+        <li className="active">
+          <a href="/create-account">Create an account</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
+        </li>
+      </ul>
     </nav>
   );
-};
-
-export default NavBar;
+}
