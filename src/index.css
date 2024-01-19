@@ -1,0 +1,10 @@
+/* this is for more global things like body, head, html, etc. */
+html {
+  /* these must be on top ->  */
+  background: url("background-1.jpg") no-repeat center center;
+  background-size: 100% 100%;
+  /* <- to here */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
