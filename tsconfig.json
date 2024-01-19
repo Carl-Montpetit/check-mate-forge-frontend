@@ -10,7 +10,7 @@
     "module": "node16",
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "node16",
+    "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
