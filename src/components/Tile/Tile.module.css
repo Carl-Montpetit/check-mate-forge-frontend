@@ -1,0 +1,30 @@
+.blackTile {
+  background-color: #b58863;
+  display: grid;
+  height: 100px;
+  place-content: center;
+  width: 100px;
+}
+
+.piece {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5em;
+  cursor: grab;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+.piece:active {
+  cursor: grabbing;
+}
+
+.whiteTile {
+  background-color: #f0d9b5;
+  display: grid;
+  height: 100px;
+  place-content: center;
+  width: 100px;
+}

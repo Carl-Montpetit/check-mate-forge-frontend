@@ -1,16 +1,18 @@
-#title-container {
+.titleContainer {
+  align-content: center;
   display: flex;
   justify-content: center;
-  align-content: center;
 }
 
-#title-header {
-  margin: 15px;
-  padding: 0px;
-  font-size: 50px;
+.titleHeader {
+  /* these needs to be at the top -> */
   font-family: "Papyrus", fantasy;
   background: linear-gradient(to bottom, #302212, #8f895e);
   background-clip: text;
+  /* <- to here  */
   color: transparent;
+  font-size: 50px;
+  margin: 15px;
+  padding: 0px;
   text-align: center;
 }
