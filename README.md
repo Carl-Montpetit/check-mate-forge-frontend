@@ -1,4 +1,4 @@
-#  ♕check-mate-forge-frontend♔
+# ♕check-mate-forge-frontend♔
 
 > react + vite + typescript + eslint application
 
@@ -19,12 +19,6 @@ npm run lint
 # preview with vite
 npm run preview
 ```
-
-## modules
-
-- `@hello-pangea/dnd`: easy drag & drop additions
-  - fork of `react-beautiful-dnd`
-  - got problems with `ReactStrict` mode
 
 ## Docker
 
